@@ -1,0 +1,13 @@
+<h1>Dallas Animal Shelter</h1>
+<app-bts-table
+	[_tblHeaders]="headers"
+	[_tblData]="data"
+	[_pageIndex]="defaultPageIndex"
+	[_pageSize]="defaultPageSize">
+</app-bts-table>
+<app-bts-paginator *ngIf="(data)"
+	[_pageIndex]="defaultPageIndex"
+	[_totalItems]="totalItems"
+	[_pageSize]="defaultPageSize"
+	(pageUpdated)="onPageUpdated($event)">
+</app-bts-paginator>

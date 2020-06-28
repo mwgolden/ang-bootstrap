@@ -1,0 +1,25 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { AnimalShelterComponent } from './animal-shelter.component';
+
+describe('AnimalShelterComponent', () => {
+  let component: AnimalShelterComponent;
+  let fixture: ComponentFixture<AnimalShelterComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ AnimalShelterComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AnimalShelterComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

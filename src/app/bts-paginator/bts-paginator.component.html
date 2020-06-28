@@ -1,0 +1,15 @@
+<nav aria-label="...">
+	<ul class="pagination">
+		<li [className]="hasPreviousPage() ? 'page-item': 'page-item disabled'">
+			<button class="page-link" (click)="previousPage()" aria-label="Previous">Previous</button>
+		</li>
+		<!--
+		<li class="page-item" *ngFor="let page of pages">
+			<button class="page-link" (click)="updatePageIndex($event)">{{page}}</button>
+		</li>
+		-->
+		<li [className]="hasNextPage() ? 'page-item': 'page-item disabled'">
+			<button class="page-link" (click)="nextPage()" aria-label="Next">Next</button>
+		</li>
+	</ul>
+</nav>
