@@ -1,5 +1,13 @@
 <nav aria-label="...">
 	<ul class="pagination">
+		<div *ngIf="hasPageSizeOptions()" class="btn-group">
+		  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Page Size
+		  </button>
+		  <div class="dropdown-menu">
+		   	<button (click)="updatePageSize($event)" class="dropdown-item" *ngFor="let option of pageSizeOptions">{{option}}</button>
+		  </div>
+		</div>
 		<li [className]="hasPreviousPage() ? 'page-item': 'page-item disabled'">
 			<button class="page-link" (click)="previousPage()" aria-label="Previous">Previous</button>
 		</li>

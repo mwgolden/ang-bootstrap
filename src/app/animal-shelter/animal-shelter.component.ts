@@ -11,6 +11,7 @@ export class AnimalShelterComponent implements OnInit {
 	data: Array<any>
 	defaultPageIndex: number = 0
 	defaultPageSize: number = 10
+	defaultPageSizeOptions: number[] = [10, 25, 50]
 	totalItems: number = 0
   constructor(
 		private dataService: AnimalShelterDataService

@@ -51,6 +51,9 @@ export class BtsPaginatorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+	hasPageSizeOptions(): boolean {
+		return this.pageSizeOptions.length > 1
+	}
 	hasNextPage(): boolean {
 		return this.pageIndex < this.totalPages && this.pageSize > 0
 	}
@@ -66,6 +69,12 @@ export class BtsPaginatorComponent implements OnInit {
 	previousPage(): void {
 		if(this.hasPreviousPage){
 			this.pageIndex--
+			this._emitPageUpdatedEvent()
+		}
+	}
+	updatePageSize(event): void {
+		if(this.hasPageSizeOptions()){
+			this.pageSize = +event.target.innerText
 			this._emitPageUpdatedEvent()
 		}
 	}

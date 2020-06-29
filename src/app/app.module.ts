@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BtsPaginatorComponent } from './bts-paginator/bts-paginator.component';
 import { AnimalShelterComponent } from './animal-shelter/animal-shelter.component';
-import { BtsTableComponent } from './bts-table/bts-table.component'
+import { BtsTableComponent } from './bts-table/bts-table.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,6 @@ import { BtsTableComponent } from './bts-table/bts-table.component'
 		BtsPaginatorComponent,
 		AnimalShelterComponent,
 		BtsTableComponent
-
   ],
   imports: [
     BrowserModule,
